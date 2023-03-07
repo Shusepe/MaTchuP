@@ -382,7 +382,7 @@ MonoBehaviour:
   m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cc4a1d60052b08842b926253d6c9824a, type: 2}
-  m_sharedMaterial: {fileID: 7092588804988622346, guid: cc4a1d60052b08842b926253d6c9824a,
+  m_sharedMaterial: {fileID: -506967543110391165, guid: cc4a1d60052b08842b926253d6c9824a,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -541,15 +541,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 246544446}
-        m_TargetAssemblyTypeName: MenuInit, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Game
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1436686478
@@ -703,10 +703,10 @@ RectTransform:
   m_Father: {fileID: 1531845289}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -505, y: -300}
-  m_SizeDelta: {x: 70.3941, y: 70.3226}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 135, y: 20}
+  m_SizeDelta: {x: 70.394104, y: 70.3226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717214509
 MonoBehaviour:
@@ -753,15 +753,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 246544446}
-        m_TargetAssemblyTypeName: MenuInit, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Credits
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1717214510

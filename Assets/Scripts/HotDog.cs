@@ -70,7 +70,7 @@ public class HotDog : MonoBehaviour
             hotDogID = 7;
         };
 
-        Destroy(gameObject, 8f);
+        //Destroy(gameObject, 8f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
