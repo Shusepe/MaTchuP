@@ -28,7 +28,7 @@ public class OrderManager : MonoBehaviour
 
     Order CreateRandomOrder() 
     {
-        //Crear HotDog de manera Random
+        //generar bools random
         Order newOrder = new Order(true, false, true);
 
         return newOrder;

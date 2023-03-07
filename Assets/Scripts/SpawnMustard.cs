@@ -9,9 +9,18 @@ public class SpawnMustard : MonoBehaviour
 
     public CircleCollider2D colliderMustard;
 
+    public AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void SpawnMust()
     {
         instanceMustard = Instantiate(mustard);
         colliderMustard = instanceMustard.AddComponent<CircleCollider2D>();
+
+        audioSource.Play();
     }
 }

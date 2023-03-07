@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class HotDog : MonoBehaviour
 {
-    private int hotDogID;
 
     public float speed;
     //public float plus;
@@ -31,46 +30,37 @@ public class HotDog : MonoBehaviour
         if (mayonnaise == true) 
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogMa;
-            hotDogID = 1;
         };
         
         if (ketchup == true) 
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogK;
-            hotDogID = 2;
         };
 
         if (mustard == true)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogMu;
-            hotDogID = 3;
         };
 
         if (ketchup == true && mayonnaise == true)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogKMa;
-            hotDogID = 4;
         };
 
         if (ketchup == true && mustard == true)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogKMu;
-            hotDogID = 5;
         };
 
         if (mayonnaise == true && mustard == true)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogMM;
-            hotDogID = 6;
         };
 
         if (ketchup == true && mayonnaise == true && mustard == true)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = full;
-            hotDogID = 7;
         };
-
-        //Destroy(gameObject, 8f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -90,6 +80,8 @@ public class HotDog : MonoBehaviour
             mustard = true;
         }
     }
+
+    //SpriteRender = getSpriteByID(1);
 
     public bool DressingMatch(bool orderMayonnaise, bool orderKetchup, bool orderMustard) 
     {
