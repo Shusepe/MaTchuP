@@ -39,7 +39,7 @@ public class EndOrder : MonoBehaviour
 
             //Order currentOrder = orderManager.GetCurrentOrder();
 
-            if (collision.gameObject.GetComponent<HotDog>().DressingMatch(true, false, true/*currentOrder.getMayonnaise(), currentOrder.getKetchup(), currentOrder.getMustard()*/))
+            if (collision.gameObject.GetComponent<HotDog>().DressingMatch(true, true, true/*currentOrder.getMayonnaise(), currentOrder.getKetchup(), currentOrder.getMustard()*/))
             {
                 score.PlusPoints(totalPoints);
                 audioSource.PlayOneShot(rigthSound);

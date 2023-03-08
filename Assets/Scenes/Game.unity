@@ -380,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15f3cd0631d6364dbe99bee8374e1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPressing: 0
   mayonnaise: {fileID: 681167686582075197, guid: 189150341ec86e2438d8afe6c25127db,
     type: 3}
   instanceMayonnaise: {fileID: 0}
@@ -740,7 +741,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176507905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3199, y: 2.6484, z: -0.0134}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0061333, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3357,10 +3358,13 @@ MonoBehaviour:
   strike1: {fileID: 5202248675149337589, guid: 7ddb045c33e1da44baf637e05888c934, type: 3}
   strike2: {fileID: 404588469527989831, guid: c82ae061c876a7f478f6214e3f8f0a49, type: 3}
   strike3: {fileID: 487173570176504441, guid: 8be9b8f0711faa042a8d9a65d8ad01a4, type: 3}
+  resumeButton: {fileID: 675733380}
+  gameManager: {fileID: 1583677044}
   strike: []
   score: {fileID: 1387282939}
   wrongSound: {fileID: 8300000, guid: 03013f39d8ed95f4a8371f3f4d119020, type: 3}
   rigthSound: {fileID: 8300000, guid: 536192bdcf5d7514ab4de74d5117c1a8, type: 3}
+  loseSound: {fileID: 8300000, guid: 5e835fd934025a1499193603bc417a4d, type: 3}
 --- !u!82 &1614738895
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3371,7 +3375,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 536192bdcf5d7514ab4de74d5117c1a8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4408,6 +4412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15f3cd0631d6364dbe99bee8374e1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPressing: 0
   mayonnaise: {fileID: 681167686582075197, guid: 189150341ec86e2438d8afe6c25127db,
     type: 3}
   instanceMayonnaise: {fileID: 0}

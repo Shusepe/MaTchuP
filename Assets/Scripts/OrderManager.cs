@@ -9,8 +9,6 @@ public class OrderManager : MonoBehaviour
 
     void Start()
     {
-        //Darles valores iniciales a las variables
-
         currentOrder = CreateRandomOrder();
         nextOrder = CreateRandomOrder();
     }
