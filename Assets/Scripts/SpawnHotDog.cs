@@ -7,8 +7,6 @@ public class SpawnHotDog : MonoBehaviour
     public GameObject hotDog;
     public GameObject instanceHotDog;
 
-    public BoxCollider2D colliderHotDog;
-
     public bool anotherOrder = true;
 
     void Update()
@@ -21,9 +19,11 @@ public class SpawnHotDog : MonoBehaviour
         if (anotherOrder == true)
         {
             instanceHotDog = Instantiate(hotDog);
-            //colliderHotDog = instanceHotDog.AddComponent<BoxCollider2D>();
-            //colliderHotDog.size = new Vector2((float)8, (float)4);
-            //colliderHotDog.offset = new Vector2((float)-0.1, (float)-0.6);
+
+            if (hotDog.GetComponent<HotDog>().speed < 7)
+            {
+                hotDog.GetComponent<HotDog>().speed += (float)0.5;
+            }
 
             anotherOrder = false;
         }

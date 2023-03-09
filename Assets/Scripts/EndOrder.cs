@@ -12,6 +12,7 @@ public class EndOrder : MonoBehaviour
     public GameObject strike1;
     public GameObject strike2;
     public GameObject strike3;
+    public GameObject strikeOut;
     public GameObject resumeButton;
 
     public GameManager gameManager;
@@ -27,7 +28,7 @@ public class EndOrder : MonoBehaviour
 
     public void Start()
     {
-        strike = new GameObject[3] { strike1, strike2, strike3 };
+        strike = new GameObject[4] { strike1, strike2, strike3, strikeOut };
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -53,12 +54,12 @@ public class EndOrder : MonoBehaviour
                 strikeCount++;
 
                 //-----------Lose------------
-                //if (strikeCount == 3) 
-                //{
-                //    gameManager.pauseButton();
-                //    resumeButton.SetActive(false);
-                //    audioSource.PlayOneShot(loseSound);
-                //}
+                if (strikeCount == 4)
+                {
+                    gameManager.pauseButton();
+                    resumeButton.SetActive(false);
+                    audioSource.PlayOneShot(loseSound);
+                }
             }
 
             //orderManager.UpdateOrders();

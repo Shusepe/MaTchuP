@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class HotDog : MonoBehaviour
 {
 
-    public float speed;
-    //public float plus;
+    public float speed = 2;
 
     public bool mayonnaise = false;
     public bool ketchup = false;
@@ -23,9 +22,7 @@ public class HotDog : MonoBehaviour
 
     void Update()
     {
-        //plus += 1;
-
-        transform.Translate(speed * Time.deltaTime /* x plus*/, 0, 0);
+        transform.Translate(speed * Time.deltaTime, 0, 0);
 
         if (mayonnaise == true) 
         {

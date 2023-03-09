@@ -23,12 +23,14 @@ public class SpawnMayonnaise : MonoBehaviour
 
     public void SpawnMayo() 
     {
+        //Instanciar por posicion de el boton
+
         isPressing = true;
 
         instanceMayonnaise = Instantiate(mayonnaise);
         colliderMayonnaise = instanceMayonnaise.AddComponent<CircleCollider2D>();
 
-        anim.SetBool("IsPressing", isPressing);
+        //anim.SetBool("IsPressing", isPressing);
 
         audioSource.Play();
 

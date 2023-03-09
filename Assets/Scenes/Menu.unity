@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f15c2c77842065469646b41e97de023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  hotDog: {fileID: 387664200580125426, guid: 5416278df37b5104a94ea98790b132c3, type: 3}
 --- !u!82 &246544447
 AudioSource:
   m_ObjectHideFlags: 0

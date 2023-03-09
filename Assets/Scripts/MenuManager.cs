@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public AudioSource audioSource;
+    private AudioSource audioSource;
+
+    public GameObject hotDog;
 
     private void Start()
     {
@@ -15,8 +17,13 @@ public class MenuManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
+        audioSource.Play();
 
-        audioSource.Play(); 
+        if (sceneName == "Game") 
+        {
+            hotDog.GetComponent<HotDog>().speed = (float)2;
+        }
     }
 
     public void Exit()

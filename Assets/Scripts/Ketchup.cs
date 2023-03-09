@@ -9,8 +9,7 @@ public class Ketchup : MonoBehaviour
     void Update()
     {
         transform.Translate(0, speed * Time.deltaTime, 0);
-
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, .8f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

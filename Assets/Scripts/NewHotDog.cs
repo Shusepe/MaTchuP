@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewOrder : MonoBehaviour
+public class NewHotDog : MonoBehaviour
 {
     public bool otherOrder = true;
 
