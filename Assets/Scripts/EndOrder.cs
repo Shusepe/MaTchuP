@@ -14,6 +14,8 @@ public class EndOrder : MonoBehaviour
     public GameObject strike3;
     public GameObject strikeOut;
     public GameObject resumeButton;
+    public GameObject resumeImg;
+    public GameObject canvas;
 
     public GameManager gameManager;
 
@@ -50,14 +52,20 @@ public class EndOrder : MonoBehaviour
                 score.PlusPoints(amountPoints);
                 audioSource.PlayOneShot(wrongSound);
 
-                Instantiate(strike[strikeCount]);
+                Instantiate(strike[strikeCount], canvas.transform);
                 strikeCount++;
 
                 //-----------Lose------------
                 if (strikeCount == 4)
                 {
+                    //for (int i = 0; i <= strikeCount; i++) 
+                    //{
+                    //    Destroy(strike[i]);
+                    //}
+
                     gameManager.pauseButton();
                     resumeButton.SetActive(false);
+                    resumeImg.SetActive(false);
                     audioSource.PlayOneShot(loseSound);
                 }
             }
