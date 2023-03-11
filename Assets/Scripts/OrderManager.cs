@@ -5,29 +5,40 @@ using UnityEngine;
 public class OrderManager : MonoBehaviour
 {
     private Order currentOrder;
-    private Order nextOrder;
+    private Order olderOrder;
+    bool randomMayo;
+    bool randomKet;
+    bool randomMus;
 
     void Start()
     {
         currentOrder = CreateRandomOrder();
-        nextOrder = CreateRandomOrder();
+        olderOrder = currentOrder;
     }
 
     public Order GetCurrentOrder() 
     {
         return currentOrder;
+    } 
+    
+    public Order GetOlderOrder() 
+    {
+        return olderOrder;
     }
 
     public void UpdateOrders()
     {
-        currentOrder = nextOrder;
-        nextOrder = CreateRandomOrder();
+        olderOrder = currentOrder;
+        currentOrder = CreateRandomOrder();
     }
 
-    Order CreateRandomOrder() 
+    Order CreateRandomOrder()
     {
-        //generar bools random
-        Order newOrder = new Order(true, false, true);
+        randomMayo = Random.value < 0.5f;
+        randomKet = Random.value < 0.5f;
+        randomMus = Random.value < 0.5f;
+
+        Order newOrder = new Order(randomMayo, randomKet, randomMus);
 
         return newOrder;
     }

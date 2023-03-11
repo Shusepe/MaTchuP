@@ -14,7 +14,7 @@ public class EndOrder : MonoBehaviour
     public GameObject strike3;
     public GameObject strikeOut;
     public GameObject resumeButton;
-    public GameObject resumeImg;
+    public GameObject pauseImg;
     public GameObject canvas;
 
     public GameManager gameManager;
@@ -22,6 +22,7 @@ public class EndOrder : MonoBehaviour
     public GameObject[] strike;
 
     public Score score;
+    public OrderManager orderManager;
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip wrongSound;
@@ -38,11 +39,10 @@ public class EndOrder : MonoBehaviour
     {
         if (collision.CompareTag("HotDog"))
         {
-            //OrderManager orderManager = gameObject.GetComponent<OrderManager>();
+            Order currentOrder = orderManager.GetCurrentOrder();
+            Order olderOrder = orderManager.GetOlderOrder();
 
-            //Order currentOrder = orderManager.GetCurrentOrder();
-
-            if (collision.gameObject.GetComponent<HotDog>().DressingMatch(true, true, true/*currentOrder.getMayonnaise(), currentOrder.getKetchup(), currentOrder.getMustard()*/))
+            if (collision.gameObject.GetComponent<HotDog>().DressingMatch(olderOrder.getMayonnaise(), olderOrder.getKetchup(), olderOrder.getMustard()))
             {
                 score.PlusPoints(totalPoints);
                 audioSource.PlayOneShot(rigthSound);
@@ -52,25 +52,30 @@ public class EndOrder : MonoBehaviour
                 score.PlusPoints(amountPoints);
                 audioSource.PlayOneShot(wrongSound);
 
-                Instantiate(strike[strikeCount], canvas.transform);
+                strike[strikeCount].SetActive(true);
+
+                //Instantiate(strike[strikeCount], canvas.transform);
                 strikeCount++;
 
                 //-----------Lose------------
                 if (strikeCount == 4)
                 {
                     //for (int i = 0; i <= strikeCount; i++) 
-                    //{
-                    //    Destroy(strike[i]);
+                    //{ 
+                    //    strike[i].SetActive(false);
                     //}
+
+                    strike[1].SetActive(false);
+                    strike[2].SetActive(false);
+                    strike[3].SetActive(false);
+
 
                     gameManager.pauseButton();
                     resumeButton.SetActive(false);
-                    resumeImg.SetActive(false);
+                    pauseImg.SetActive(false);
                     audioSource.PlayOneShot(loseSound);
                 }
             }
-
-            //orderManager.UpdateOrders();
         }
         Destroy(collision.gameObject);
     }

@@ -78,8 +78,6 @@ public class HotDog : MonoBehaviour
         }
     }
 
-    //SpriteRender = getSpriteByID(1);
-
     public bool DressingMatch(bool orderMayonnaise, bool orderKetchup, bool orderMustard) 
     {
         return orderMayonnaise == mayonnaise && orderKetchup == ketchup && orderMustard == mustard;

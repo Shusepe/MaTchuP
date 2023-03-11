@@ -1,17 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpriteManager : MonoBehaviour
 {
-    public Sprite hotDogMa;
-    public Sprite hotDogK;
-    public Sprite hotDogMu;
-    public Sprite hotDogKMa;
-    public Sprite hotDogKMu;
-    public Sprite hotDogMM;
-    public Sprite full;
-
     public Sprite orderMa;
     public Sprite orderK;
     public Sprite orderMu;
@@ -20,27 +13,58 @@ public class SpriteManager : MonoBehaviour
     public Sprite orderMM;
     public Sprite orderEmpty;
     public Sprite orderFull;
-                   
-    //public Dicti full;onary spritesMap;
-    // {
-    //     1: "asdasd",
-    //     2: "asdas",
-    //     3: "hola"
-    // }
 
-    void Start()
+    public OrderManager orderManager;
+
+    public Image sourceImage;
+
+    public void Start()
     {
-        //spritesMap = new Dictionary<int, Sprite>();
-        //map.Add(1, hotDogMKM);
-        //map.Add(2, hotDogMK);
-        //.
-        //.
-        //.
-        //map.Add(n, orderK);
+        sourceImage = GameObject.Find("OrderOne").GetComponent<Image>();
     }
+    
+    private void Update()
+    {
+        Order currentOrder = orderManager.GetCurrentOrder();
 
-    //public Sprite getSpriteByID(int id)
-    //{
-    //    return spritesMap[id];
-    //}
+        if (currentOrder.getMayonnaise() == true)   
+        {
+            sourceImage.sprite = orderMa;
+        };
+
+        if (currentOrder.getKetchup() == true)
+        {
+            sourceImage.sprite = orderK;
+        };
+
+        if (currentOrder.getMustard() == true)
+        {
+            sourceImage.sprite = orderMu;
+        };
+
+        if (currentOrder.getMayonnaise() == true && currentOrder.getKetchup() == true)
+        {
+            sourceImage.sprite = orderKMa;
+        };
+
+        if (currentOrder.getMustard() == true && currentOrder.getKetchup() == true)
+        {
+            sourceImage.sprite = orderKMu;
+        };
+
+        if (currentOrder.getMayonnaise() == true && currentOrder.getMustard() == true)
+        {
+            sourceImage.sprite = orderMM;
+        };
+
+        if (currentOrder.getMayonnaise() == true && currentOrder.getKetchup() == true && currentOrder.getMustard() == true)
+        {
+            sourceImage.sprite = orderFull;
+        };
+
+        if (currentOrder.getMayonnaise() == false && currentOrder.getKetchup() == false && currentOrder.getMustard() == false)
+        {
+            sourceImage.sprite = orderEmpty;
+        };
+    }
 }
