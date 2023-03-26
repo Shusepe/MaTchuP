@@ -3,7 +3,6 @@ using UnityEngine;
 public class SpawnHotDog : MonoBehaviour
 {
     public GameObject hotDog;
-    public GameObject instanceHotDog;
 
     public bool anotherOrder = true;
 
@@ -16,7 +15,7 @@ public class SpawnHotDog : MonoBehaviour
     {
         if (anotherOrder == true)
         {
-            instanceHotDog = Instantiate(hotDog);
+            Instantiate(hotDog);
 
             if (hotDog.GetComponent<HotDog>().speed < 7)
             {
