@@ -1326,11 +1326,11 @@ RectTransform:
   m_Father: {fileID: 1531845289}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 914, y: 388}
-  m_SizeDelta: {x: 96.5658, y: 121.787}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -16, y: -16}
+  m_SizeDelta: {x: 96.565796, y: 121.78699}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1742440324
 MonoBehaviour:
   m_ObjectHideFlags: 0
