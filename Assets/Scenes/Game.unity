@@ -4167,7 +4167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountPoints: 5
   totalPoints: 10
-  strikeCount: 0
   strike1: {fileID: 798001963}
   strike2: {fileID: 462958935}
   strike3: {fileID: 2004188511}
@@ -4176,7 +4175,6 @@ MonoBehaviour:
   pauseImg: {fileID: 1422116278}
   canvas: {fileID: 73901589}
   gameManager: {fileID: 1583677044}
-  strike: []
   score: {fileID: 1378469258}
   orderManager: {fileID: 1299328532}
   wrongSound: {fileID: 8300000, guid: 03013f39d8ed95f4a8371f3f4d119020, type: 3}

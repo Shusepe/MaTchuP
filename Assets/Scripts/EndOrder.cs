@@ -5,7 +5,7 @@ public class EndOrder : MonoBehaviour
     public float amountPoints;
     public float totalPoints;
 
-    public int strikeCount = 0;
+    private int strikeCount = 0;
 
     public GameObject strike1;
     public GameObject strike2;
@@ -17,7 +17,7 @@ public class EndOrder : MonoBehaviour
 
     public GameManager gameManager;
 
-    public GameObject[] strike;
+    private GameObject[] strikes;
 
     public Score score;
     public OrderManager orderManager;
@@ -29,7 +29,7 @@ public class EndOrder : MonoBehaviour
 
     public void Start()
     {
-        strike = new GameObject[4] { strike1, strike2, strike3, strikeOut };
+        strikes = new GameObject[4] { strike1, strike2, strike3, strikeOut };
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -50,7 +50,7 @@ public class EndOrder : MonoBehaviour
                 score.PlusPoints(amountPoints);
                 audioSource.PlayOneShot(wrongSound);
 
-                strike[strikeCount].SetActive(true);
+                strikes[strikeCount].SetActive(true);
 
                 //Instantiate(strike[strikeCount], canvas.transform);
                 strikeCount++;
@@ -63,9 +63,9 @@ public class EndOrder : MonoBehaviour
                     //    strike[i].SetActive(false);
                     //}
 
-                    strike[1].SetActive(false);
-                    strike[2].SetActive(false);
-                    strike[3].SetActive(false);
+                    strikes[1].SetActive(false);
+                    strikes[2].SetActive(false);
+                    strikes[3].SetActive(false);
 
 
                     gameManager.pauseButton();
