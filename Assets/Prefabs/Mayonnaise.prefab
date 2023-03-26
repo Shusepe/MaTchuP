@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2460849801082953324}
   - component: {fileID: 663598289942109740}
   - component: {fileID: 5197943230213952052}
-  - component: {fileID: 3106527657771507868}
   - component: {fileID: 5526179050162248086}
+  - component: {fileID: 3106527657771507868}
+  - component: {fileID: 5132168567314661591}
   m_Layer: 0
   m_Name: Mayonnaise
   m_TagString: Mayonnaise
@@ -100,22 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -5
---- !u!58 &3106527657771507868
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681167686582075197}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.028541803, y: -0.22769666}
-  serializedVersion: 2
-  m_Radius: 0.28206563
 --- !u!95 &5526179050162248086
 Animator:
   serializedVersion: 4
@@ -136,3 +121,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &3106527657771507868
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681167686582075197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.028541803, y: -0.22769666}
+  serializedVersion: 2
+  m_Radius: 0.28206563
+--- !u!58 &5132168567314661591
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681167686582075197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.415

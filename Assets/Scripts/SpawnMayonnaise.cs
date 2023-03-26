@@ -5,9 +5,6 @@ public class SpawnMayonnaise : MonoBehaviour
     public bool isPressing;
 
     public GameObject mayonnaise;
-    public GameObject instanceMayonnaise;
-
-    public CircleCollider2D colliderMayonnaise;
 
     public AudioSource audioSource;
 
@@ -25,8 +22,7 @@ public class SpawnMayonnaise : MonoBehaviour
 
         isPressing = true;
 
-        instanceMayonnaise = Instantiate(mayonnaise);
-        colliderMayonnaise = instanceMayonnaise.AddComponent<CircleCollider2D>();
+        Instantiate(mayonnaise);
 
         //anim.SetBool("IsPressing", isPressing);
 

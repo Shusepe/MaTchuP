@@ -3,9 +3,6 @@ using UnityEngine;
 public class SpawnMustard : MonoBehaviour
 {
     public GameObject mustard;
-    public GameObject instanceMustard;
-
-    public CircleCollider2D colliderMustard;
 
     public AudioSource audioSource;
 
@@ -16,8 +13,7 @@ public class SpawnMustard : MonoBehaviour
 
     public void SpawnMust()
     {
-        instanceMustard = Instantiate(mustard);
-        colliderMustard = instanceMustard.AddComponent<CircleCollider2D>();
+        Instantiate(mustard);
 
         audioSource.Play();
     }
