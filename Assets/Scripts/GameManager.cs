@@ -24,10 +24,4 @@ public class GameManager : MonoBehaviour
         ordersPanel.SetActive(true);
         Time.timeScale = 1;
     }
-
-    public void exit() 
-    {
-        Application.Quit();
-        Debug.Log("Saliste del juego...");
-    }
 }
