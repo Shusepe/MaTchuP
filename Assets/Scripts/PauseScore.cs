@@ -3,19 +3,17 @@ using TMPro;
 
 public class PauseScore : MonoBehaviour
 {
-    public float points;
-
     public Score highScore;
-    public TextMeshProUGUI textMeshPointsH;
+    private TextMeshProUGUI textMeshPointsH;
 
-    public void Start()
+    public void Awake()
     {
         textMeshPointsH = GetComponent<TextMeshProUGUI>();
     }
 
-    public void Update()
+    public void OnEnable()
     {
-        points = highScore.points;
+        float points = highScore.points;
         textMeshPointsH.text = points.ToString("0");
     }
 
