@@ -2,52 +2,62 @@ using UnityEngine;
 
 public class Volume : MonoBehaviour
 {
-    public AudioSource music;
-
     public GameObject minVolume;
     public GameObject medVolume;
     public GameObject higVolume;
 
+    private sbyte volumeLevel = 3;
+
     public void decreaseVolume() 
     {
-        music.GetComponent<AudioSource>().volume -= 0.25f;
+        volumeLevel--;
+        UpdateVolume();
     }
     
-    public void increaseVolume() 
+    public void increaseVolume()
     {
-        music.GetComponent<AudioSource>().volume += 0.25f;
+        volumeLevel++;
+        UpdateVolume();
     }
 
-    public void Update()
+    private void UpdateVolume()
     {
-        if (music.GetComponent<AudioSource>().volume == 0)
-        {
-            minVolume.SetActive(false);
-            medVolume.SetActive(false);
-            higVolume.SetActive(false);
-        }
-        
-        if (music.GetComponent<AudioSource>().volume < 0.5f && music.GetComponent<AudioSource>().volume > 0)
-        {
-            minVolume.SetActive(true);
-            medVolume.SetActive(false);
-            higVolume.SetActive(false);
-        }
+        if (volumeLevel < 0)
+            volumeLevel = 0;
 
-        if (music.GetComponent<AudioSource>().volume == 0.5f)
-        {
-            minVolume.SetActive(true);
-            medVolume.SetActive(true);
-            higVolume.SetActive(false);
-        }
+        if (volumeLevel > 3)
+            volumeLevel = 3;
 
-        if (music.GetComponent<AudioSource>().volume > 0.5f)
+        switch (volumeLevel)
         {
-            minVolume.SetActive(true);
-            medVolume.SetActive(true);
-            higVolume.SetActive(true);
-        }
+            case 0:
+                AudioListener.volume = 0.0f;
 
-        Debug.Log(music.GetComponent<AudioSource>().volume);
+                minVolume.SetActive(false);
+                medVolume.SetActive(false);
+                higVolume.SetActive(false);
+                break;
+            case 1:
+                AudioListener.volume = 0.3f;
+
+                minVolume.SetActive(true);
+                medVolume.SetActive(false);
+                higVolume.SetActive(false);
+                break;
+            case 2:
+                AudioListener.volume = 0.6f;
+
+                minVolume.SetActive(true);
+                medVolume.SetActive(true);
+                higVolume.SetActive(false);
+                break;
+            case 3:
+                AudioListener.volume = 1.0f;
+
+                minVolume.SetActive(true);
+                medVolume.SetActive(true);
+                higVolume.SetActive(true);
+                break;
+        }
     }
 }
