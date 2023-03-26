@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 981570982}
   - component: {fileID: 981570981}
   m_Layer: 5
-  m_Name: GameDesing
+  m_Name: GameDesign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Desing
+  m_text: Game Design
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cc4a1d60052b08842b926253d6c9824a, type: 2}
   m_sharedMaterial: {fileID: -506967543110391165, guid: cc4a1d60052b08842b926253d6c9824a,
