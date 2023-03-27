@@ -3547,7 +3547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
-  textMeshPoints: {fileID: 1378469259}
 --- !u!114 &1378469259
 MonoBehaviour:
   m_ObjectHideFlags: 0
