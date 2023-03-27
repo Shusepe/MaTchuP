@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
         pauseButtons.SetActive(false);
         ordersPanel.SetActive(false);
         Time.timeScale = 0;
+
+        ButtonsSound.instance.PlayButtonSound();
     }
 
     public void playButton() 
@@ -26,5 +28,7 @@ public class GameManager : MonoBehaviour
         pauseButtons.SetActive(true);
         ordersPanel.SetActive(true);
         Time.timeScale = 1;
+
+        ButtonsSound.instance.PlayButtonSound();
     }
 }
