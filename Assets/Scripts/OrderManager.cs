@@ -8,7 +8,7 @@ public class OrderManager : MonoBehaviour
     bool randomKet;
     bool randomMus;
 
-    void Start()
+    public void SetFirstOrder()
     {
         currentOrder = CreateRandomOrder();
         olderOrder = currentOrder;
