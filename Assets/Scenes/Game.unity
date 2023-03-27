@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hotDog: {fileID: 387664200580125426, guid: 5416278df37b5104a94ea98790b132c3, type: 3}
+  escalatorAnimator: {fileID: 1972387983}
 --- !u!4 &51182980
 Transform:
   m_ObjectHideFlags: 0
