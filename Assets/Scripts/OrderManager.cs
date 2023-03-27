@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OrderManager : MonoBehaviour
@@ -10,7 +8,7 @@ public class OrderManager : MonoBehaviour
     bool randomKet;
     bool randomMus;
 
-    void Start()
+    public void SetFirstOrder()
     {
         currentOrder = CreateRandomOrder();
         olderOrder = currentOrder;
