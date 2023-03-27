@@ -401,7 +401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hotDog: {fileID: 387664200580125426, guid: 5416278df37b5104a94ea98790b132c3, type: 3}
-  anotherOrder: 1
 --- !u!4 &51182980
 Transform:
   m_ObjectHideFlags: 0
@@ -5315,7 +5314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9af6dea212574a418f3896917159f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherOrder: 1
   spawnOrder: {fileID: 51182979}
   orderManager: {fileID: 1299328532}
   orderSpriteManager: {fileID: 408717021}

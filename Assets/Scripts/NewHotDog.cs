@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class NewHotDog : MonoBehaviour
 {
-    public bool otherOrder = true;
-
     public SpawnHotDog spawnOrder;
     public OrderManager orderManager;
     public SpriteManager orderSpriteManager;
@@ -13,6 +11,7 @@ public class NewHotDog : MonoBehaviour
 
     private void Start()
     {
+        spawnOrder.Spawn();
         orderManager.SetFirstOrder();
         orderSpriteManager.UpdateOrderImage();
 
@@ -24,7 +23,7 @@ public class NewHotDog : MonoBehaviour
     {
         if (collision.CompareTag("HotDog"))
         {
-            spawnOrder.Order(otherOrder);
+            spawnOrder.Spawn();
             orderManager.UpdateOrders();
             orderSpriteManager.UpdateOrderImage();
 
