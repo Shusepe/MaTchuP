@@ -14,14 +14,14 @@ public class SpriteManager : MonoBehaviour
 
     public OrderManager orderManager;
 
-    public Image sourceImage;
+    private Image sourceImage;
 
     public void Start()
     {
         sourceImage = GameObject.Find("OrderOne").GetComponent<Image>();
     }
     
-    private void Update()
+    public void UpdateOrderImage()
     {
         Order currentOrder = orderManager.GetCurrentOrder();
 

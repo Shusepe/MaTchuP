@@ -917,7 +917,6 @@ MonoBehaviour:
   orderEmpty: {fileID: 21300000, guid: a0638a522590ec342ac46cc9d068205b, type: 3}
   orderFull: {fileID: 21300000, guid: d9c766fab35523b46944edfbe4ffdcac, type: 3}
   orderManager: {fileID: 1299328532}
-  sourceImage: {fileID: 0}
 --- !u!1 &462958935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 655689601}
+  - component: {fileID: 655689602}
   m_Layer: 5
   m_Name: OrdersPanel
   m_TagString: Untagged
@@ -1198,6 +1198,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 16}
   m_SizeDelta: {x: 663.3514, y: 287.9876}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!95 &655689602
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655689600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4ddff716c0a96f84786564698ece81b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &664849432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,6 +2354,7 @@ GameObject:
   - component: {fileID: 947644083}
   - component: {fileID: 947644085}
   - component: {fileID: 947644084}
+  - component: {fileID: 947644086}
   m_Layer: 5
   m_Name: Rope
   m_TagString: Untagged
@@ -2398,6 +2420,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947644082}
   m_CullTransparentMesh: 1
+--- !u!95 &947644086
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947644082}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 984686b8e42ac994d985cd9b4d17031e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &980409834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,10 +2760,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.8941177, g: 0.8941177, b: 0.9058824, a: 1}
+  m_Color: {r: 0.44705886, g: 0.44705886, b: 0.45098042, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4818,7 +4861,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922799696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -70.54852}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4827,11 +4870,11 @@ RectTransform:
   m_Father: {fileID: 655689601}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122, y: 21.354}
-  m_SizeDelta: {x: 663.35, y: 330.696}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0.7}
+  m_AnchorMax: {x: 0.5, y: 0.7}
+  m_AnchoredPosition: {x: 122.00001, y: 19.010025}
+  m_SizeDelta: {x: 663.35, y: 323.3}
+  m_Pivot: {x: 0.5, y: 0.7}
 --- !u!114 &1922799698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5188,10 +5231,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.8941177, g: 0.8941177, b: 0.9058824, a: 1}
+  m_Color: {r: 0.44705886, g: 0.44705886, b: 0.45098042, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5275,3 +5318,6 @@ MonoBehaviour:
   otherOrder: 1
   spawnOrder: {fileID: 51182979}
   orderManager: {fileID: 1299328532}
+  orderSpriteManager: {fileID: 408717021}
+  orderAnimator: {fileID: 655689602}
+  ropeAnimator: {fileID: 947644086}
