@@ -3,6 +3,7 @@ using UnityEngine;
 public class HotDog : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
 
     public float speed = 2;
 
@@ -21,6 +22,7 @@ public class HotDog : MonoBehaviour
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -65,6 +67,8 @@ public class HotDog : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        audioSource.Play();
+
         if (collision.collider.CompareTag("Mayonnaise"))
         {
             mayonnaise = true;
