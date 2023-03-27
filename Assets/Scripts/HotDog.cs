@@ -6,9 +6,9 @@ public class HotDog : MonoBehaviour
 
     public float speed = 2;
 
-    public bool mayonnaise = false;
-    public bool ketchup = false;
-    public bool mustard = false;
+    private bool mayonnaise = false;
+    private bool ketchup = false;
+    private bool mustard = false;
 
     public Sprite hotDogMa;
     public Sprite hotDogK;
@@ -83,6 +83,8 @@ public class HotDog : MonoBehaviour
 
     public bool DressingMatch(bool orderMayonnaise, bool orderKetchup, bool orderMustard) 
     {
-        return orderMayonnaise == mayonnaise && orderKetchup == ketchup && orderMustard == mustard;
+        return orderMayonnaise == mayonnaise && 
+               orderKetchup == ketchup && 
+               orderMustard == mustard;
     }
 }
