@@ -28,8 +28,33 @@ public class HotDog : MonoBehaviour
     void Update()
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
+    }
 
-        if (mayonnaise == true) 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        audioSource.Play();
+
+        if (collision.collider.CompareTag("Mayonnaise"))
+        {
+            mayonnaise = true;
+        }
+
+        if (collision.collider.CompareTag("Ketchup"))
+        {
+            ketchup = true;
+        }
+
+        if (collision.collider.CompareTag("Mustard"))
+        {
+            mustard = true;
+        }
+
+        UpdateSprite();
+    }
+
+    private void UpdateSprite()
+    {
+        if (mayonnaise == true)
         {
             spriteRenderer.sprite = hotDogMa;
         };
@@ -63,26 +88,6 @@ public class HotDog : MonoBehaviour
         {
             spriteRenderer.sprite = full;
         };
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        audioSource.Play();
-
-        if (collision.collider.CompareTag("Mayonnaise"))
-        {
-            mayonnaise = true;
-        }
-
-        if (collision.collider.CompareTag("Ketchup"))
-        {
-            ketchup = true;
-        }
-
-        if (collision.collider.CompareTag("Mustard"))
-        {
-            mustard = true;
-        }
     }
 
     public bool DressingMatch(bool orderMayonnaise, bool orderKetchup, bool orderMustard) 
