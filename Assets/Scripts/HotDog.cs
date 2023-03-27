@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class HotDog : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
 
     public float speed = 2;
 
@@ -17,43 +18,48 @@ public class HotDog : MonoBehaviour
     public Sprite hotDogMM;
     public Sprite full;
 
+    void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     void Update()
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
 
         if (mayonnaise == true) 
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogMa;
+            spriteRenderer.sprite = hotDogMa;
         };
         
         if (ketchup == true) 
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogK;
+            spriteRenderer.sprite = hotDogK;
         };
 
         if (mustard == true)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogMu;
+            spriteRenderer.sprite = hotDogMu;
         };
 
         if (ketchup == true && mayonnaise == true)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogKMa;
+            spriteRenderer.sprite = hotDogKMa;
         };
 
         if (ketchup == true && mustard == true)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogKMu;
+            spriteRenderer.sprite = hotDogKMu;
         };
 
         if (mayonnaise == true && mustard == true)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = hotDogMM;
+            spriteRenderer.sprite = hotDogMM;
         };
 
         if (ketchup == true && mayonnaise == true && mustard == true)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = full;
+            spriteRenderer.sprite = full;
         };
     }
 
